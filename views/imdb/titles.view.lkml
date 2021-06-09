@@ -30,7 +30,7 @@ view: titles {
         case
           when ${TABLE}.isAdult = '0' then false
           when ${TABLE}.isAdult = '1' then true
-        end as is_adult
+        end
     ;;
   }
 
