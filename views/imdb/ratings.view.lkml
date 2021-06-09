@@ -27,7 +27,7 @@ view: ratings {
 
   measure: average_rating {
     type: number
-    value_format_name: percent_1
+    value_format_name: decimal_1
     sql: sum(${title_average_rating} * ${title_number_of_votes}) / ${number_of_votes} ;;
   }
 

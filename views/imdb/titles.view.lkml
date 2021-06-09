@@ -36,11 +36,13 @@ view: titles {
 
   dimension: start_year {
     type: number
+    value_format: "####"
     sql: cast(nullif(${TABLE}.startYear,'\\N') as int64) ;;
   }
 
   dimension: end_year {
     type: number
+    value_format: "####"
     sql: cast(nullif(${TABLE}.endYear,'\\N') as int64) ;;
   }
 
