@@ -1,5 +1,5 @@
 view: ratings {
-  sql_table_name: frankenmovies.imdb.rating ;;
+  sql_table_name: frankenmovies.imdb.ratings ;;
   label: "Ratings"
 
   dimension: title_id {
