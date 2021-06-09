@@ -13,17 +13,19 @@ explore: ratings {
   }
 }
 
-explore: frankenmovies {
+explore: frankenmovies_pdt {
+  label: "Frankenmovies"
+  view_label: "Frankenmovies"
   join: first_movie {
     from: titles
     view_label: "First Movie"
     relationship: many_to_one
-    sql_on: ${frankenmovies.first_movie_id} = ${first_movie.id} ;;
+    sql_on: ${frankenmovies_pdt.first_movie_id} = ${first_movie.id} ;;
   }
   join: second_movie {
     from: titles
     view_label: "Second Movie"
     relationship: many_to_one
-    sql_on: ${frankenmovies.first_movie_id} = ${second_movie.id} ;;
+    sql_on: ${frankenmovies_pdt.second_movie_id} = ${second_movie.id} ;;
   }
 }

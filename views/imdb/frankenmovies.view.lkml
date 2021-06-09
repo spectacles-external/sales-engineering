@@ -1,4 +1,4 @@
-view: frankenmovies {
+view: frankenmovies_pdt {
   derived_table: {
     persist_for: "24 hours"
     sql:
