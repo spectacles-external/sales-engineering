@@ -1,5 +1,5 @@
 view: titles {
-  sql_table_name: frankenmovies.imdb.basics ;;
+  sql_table_name: frankenmovies.{{_user_attributes['dataset_location']}}.basics ;;
   label: "Titles"
 
   dimension: id {
