@@ -10,7 +10,7 @@ view: ratings {
 
   dimension: title_average_rating {
     type: number
-    hidden: yes
+    label: "Rating"
     sql: ${TABLE}.averageRating ;;
   }
 
