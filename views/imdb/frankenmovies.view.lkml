@@ -11,8 +11,8 @@ view: frankenmovies_pdt {
           ratings.averageRating,
           ratings.numVotes,
           row_number() over (order by ratings.numVotes desc) as vote_rank
-        from frankenmovies.imdb.basics
-        inner join frankenmovies.imdb.ratings
+        from frankenmovies.{{_user_attributes['dataset_location']}}.basics
+        inner join frankenmovies.{{_user_attributes['dataset_location']}}.ratings
           on basics.tconst = ratings.tconst
         where basics.titleType = 'movie'
           and length(basics.primaryTitle) != length(replace(basics.primaryTitle,' ',''))
