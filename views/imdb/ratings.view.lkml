@@ -11,13 +11,13 @@ view: ratings {
   dimension: title_average_rating {
     type: number
     label: "Rating"
-    sql: ${TABLE}.averageRating ;;
+    sql: ${TABLE}.averageRating_ ;;
   }
 
   dimension: title_number_of_votes {
     type: number
     hidden: yes
-    sql: ${TABLE}.numVotes ;;
+    sql: ${TABLE}.numVote ;;
   }
 
   measure: number_of_votes {
