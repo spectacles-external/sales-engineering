@@ -1,6 +1,6 @@
 view: standing_results {
   derived_table: {
-    sql:  select *, row_number() over (partition by season order by wins desc, points desc) as position from fantasy_football.results_week_11 ;;
+    sql:  select *, row_number() over (partition by season order by wins desc, points desc) as position from fantasy_football.results_week_12 ;;
     persist_for: "24 hours"
   }
 
