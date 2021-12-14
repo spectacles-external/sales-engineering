@@ -1,6 +1,6 @@
 view: standing_results {
   derived_table: {
-    sql:  select *, row_number() over (partition by season order by wins desc, points desc) as position from fantasy_football.results_week_13 ;;
+    sql:  select *, row_number() over (partition by season order by wins desc, points desc) as position from fantasy_football.results_week_14 ;;
     persist_for: "24 hours"
   }
 
@@ -37,5 +37,15 @@ view: standing_results {
   measure: percentage_of_total_season {
     type: percent_of_total
     sql: ${number_of_seasons} ;;
+  }
+
+  measure: median_position {
+    type: median
+    sql:  ${position};;
+  }
+
+  measure: mean_position {
+    type: average
+    sql:  ${position};;
   }
 }
