@@ -11,7 +11,7 @@ view: standing_results {
 
   dimension: season {
     type: number
-    sql: ${TABLE}.season ;;
+    sql: ${TABLE}.seson ;;
   }
 
   dimension: team {
