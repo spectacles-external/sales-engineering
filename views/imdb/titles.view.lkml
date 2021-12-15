@@ -18,6 +18,12 @@ view: titles {
     sql: ${TABLE}.primaryTitle ;;
   }
 
+  dimension: is_movie_good {
+    label: "Is Movie Good?"
+    type: yesno
+    sql: ${title} = "The Good, the Bad, and the Ugly" ;;
+  }
+
   dimension: original_tible {
     type: string
     sql: ${TABLE}.originalTitle ;;
