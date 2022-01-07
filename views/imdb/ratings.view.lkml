@@ -2,6 +2,7 @@ view: ratings {
   sql_table_name: frankenmovies.{{_user_attributes['dataset_location']}}.ratings ;;
   label: "Ratings"
 
+
   dimension: title_id {
     type: string
     primary_key: yes
