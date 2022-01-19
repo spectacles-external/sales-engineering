@@ -11,7 +11,7 @@ view: ratings {
   dimension: title_average_rating {
     type: number
     label: "Rating"
-    sql: ${TABLE}.average_rating ;;
+    sql: ${TABLE}.averageRating ;;
   }
 
   dimension: title_number_of_votes {
