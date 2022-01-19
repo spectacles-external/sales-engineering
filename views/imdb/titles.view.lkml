@@ -10,7 +10,7 @@ view: titles {
 
   dimension: title_type {
     type: string
-    sql: ${TABLE}.titleType ;;
+    sql: ${TABLE}. ;;
   }
 
   dimension: title {
