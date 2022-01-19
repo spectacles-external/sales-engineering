@@ -34,7 +34,7 @@ view: standing_results {
     drill_fields: []
   }
 
-  measure: percentage_of_total_season {
+  measure: _percentage_of_total_season {
     type: percent_of_total
     sql: ${number_of_seasons} ;;
   }
