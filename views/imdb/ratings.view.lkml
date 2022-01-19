@@ -17,7 +17,7 @@ view: ratings {
   dimension: title_number_of_votes {
     type: number
     hidden: yes
-    sql: ${TABLE}.numVotes ;;
+    sql: ${TABLE}.num_votes ;;
   }
 
   measure: number_of_votes {
