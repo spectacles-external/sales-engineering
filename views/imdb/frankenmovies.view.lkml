@@ -88,9 +88,9 @@ view: frankenmovies_pdt {
     hidden: yes
     sql: ${TABLE}.second_movie_id ;;
   }
-  dimension: frankenmovieScore {
+  dimension: frankenmovie_score {
     type: number
-    sql: ${TABLE}.frankenmovieScore ;;
+    sql: ${TABLE}.frankenmovi_score ;;
   }
   dimension: frankenmovie_name {
     type: string
