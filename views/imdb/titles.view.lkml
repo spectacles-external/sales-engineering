@@ -18,7 +18,7 @@ view: titles {
     sql: ${TABLE}.primaryTitle ;;
   }
 
-  dimension: original_tible {
+  dimension: originalTible {
     type: string
     sql: ${TABLE}.originalTitle ;;
   }
