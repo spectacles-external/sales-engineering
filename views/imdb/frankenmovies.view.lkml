@@ -90,7 +90,7 @@ view: frankenmovies_pdt {
   }
   dimension: frankenmovie_score {
     type: number
-    sql: ${TABLE}.frankenmovie-score ;;
+    sql: ${TABLE}.frankenmovieScore ;;
   }
   dimension: frankenmovie_name {
     type: string
