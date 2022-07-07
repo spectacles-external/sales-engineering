@@ -5,7 +5,7 @@ view: ratings {
   dimension: title_id {
     type: string
     primary_key: yes
-    sql: ${TABLE}.tconst ;;
+    sql: ${TABLE}.sdfs ;;
   }
 
   dimension: title_average_rating {
