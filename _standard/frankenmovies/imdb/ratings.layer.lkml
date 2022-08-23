@@ -1,23 +1,21 @@
-view: ratings {
-  sql_table_name: frankenmovies.{{_user_attributes['dataset_location']}}.ratings ;;
+include: "/_base/frankenmovies/imdb/ratings.view.lkml"
+
+view: +ratings {
   label: "Ratings"
 
   dimension: title_id {
-    type: string
     primary_key: yes
-    sql: ${TABLE}.tconst ;;
+    sql: ${tconst} ;;
   }
 
   dimension: title_average_rating {
-    type: number
     label: "Rating"
-    sql: ${TABLE}.averageRating ;;
+    sql: ${average_rating} ;;
   }
 
   dimension: title_number_of_votes {
-    type: number
     hidden: yes
-    sql: ${TABLE}.numVotes ;;
+    sql: ${num_votes} ;;
   }
 
   measure: number_of_votes {
@@ -25,10 +23,9 @@ view: ratings {
     sql: ${title_number_of_votes} ;;
   }
 
-  measure: average_rating {
+  measure: overall_average_rating {
     type: number
     value_format_name: decimal_1
     sql: sum(${title_average_rating} * ${title_number_of_votes}) / ${number_of_votes} ;;
   }
-
 }

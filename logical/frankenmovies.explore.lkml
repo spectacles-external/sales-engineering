@@ -1,3 +1,5 @@
+include: "/logical/ratings.explore.lkml"
+# logical/frankenmovies.layer.lkml
 view: frankenmovies_pdt {
   derived_table: {
     persist_for: "24 hours"
@@ -96,5 +98,39 @@ view: frankenmovies_pdt {
     type: string
     sql: ${TABLE}.frankenmovie_name ;;
   }
+}
 
+view: ratings_entity {
+  derived_table: {
+    explore_source: ratings {
+      column: id { field: basics.id }
+      column: title_average_rating {}
+    }
+  }
+  dimension: id {
+    description: ""
+  }
+  dimension: title_average_rating {
+    description: ""
+    type: number
+  }
+}
+
+explore: frankenmovies_pdt {
+  label: "Frankenmovies"
+  view_label: "Frankenmovies"
+
+  join: first_movie {
+    from: ratings_entity
+    view_label: "First Movie"
+    relationship: many_to_one
+    sql_on: ${frankenmovies_pdt.first_movie_id} = ${first_movie.id} ;;
+  }
+
+  join: second_movie {
+    from: ratings_entity
+    view_label: "Second Movie"
+    relationship: many_to_one
+    sql_on: ${frankenmovies_pdt.second_movie_id} = ${second_movie.id} ;;
+  }
 }
