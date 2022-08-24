@@ -1,3 +1,3 @@
-# Spectacles Learn(!)
+# LookML layered structure example
 
-This instance will be used by Sales Engineers at Looker to test and demo Spectacles.
+This is an example implementation of a layered project structure.
