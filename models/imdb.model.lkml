@@ -1,6 +1,7 @@
 connection: "spectacles_learn_bigquery"
 
 include: "/views/imdb/*.view.lkml"
+include: "/dashboards/example_dashboard.dashboard.lookml"
 
 label: "IMDB"
 
