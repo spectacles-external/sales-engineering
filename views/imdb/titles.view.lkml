@@ -29,10 +29,11 @@ view: titles {
 
 #### Add this new field by uncommenting this code!
 
-   dimension: original_title {
-     type: string
-     sql: ${TABLE}.original_title ;;
-   }
+  dimension: original_title {
+    type: string
+    description: "Original title."
+    sql: ${TABLE}.originalTitle ;;
+  }
 
   dimension: is_adult {
     label: "Is Adult?"
