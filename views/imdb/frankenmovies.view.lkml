@@ -81,19 +81,23 @@ view: frankenmovies_pdt {
   dimension: first_movie_id {
     type: string
     hidden: yes
+    description: "The ID of the title that makes up the first half of the Frankenmovie."
     sql: ${TABLE}.first_movie_id ;;
   }
   dimension: second_movie_id {
     type: string
     hidden: yes
+    description: "The ID of the title that makes up the second half of the Frankenmovie."
     sql: ${TABLE}.second_movie_id ;;
   }
   dimension: frankenmovie_score {
     type: number
+    description: "The combined score of the two movies, to infer popularity."
     sql: ${TABLE}.frankenmovie_score ;;
   }
   dimension: frankenmovie_name {
     type: string
+    description: "The Frankenmovie title, i.e. the two titles combined."
     sql: ${TABLE}.frankenmovie_name ;;
   }
 
