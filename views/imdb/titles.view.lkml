@@ -73,7 +73,7 @@ view: titles {
     sql: ${TABLE}.genres ;;
   }
 
-  measure: count_titles {
+  measure: count_titl {
     type: count_distinct
     description: "The count of unique movies or tv shows."
     label: "Count of Titles"
