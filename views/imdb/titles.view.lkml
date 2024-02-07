@@ -13,16 +13,10 @@ view: titles {
 
 #### Rename 'title_type' to 'title_category'.
 
-  dimension: title_typez {
+  dimension: title_type {
     type: string
     description: "The type of title, i.e. movie or tv show."
     sql: ${TABLE}.titleType ;;
-  }
-
-  dimension: original_title {
-    type: string
-    description: "The type of title, i.e. movie or tv show."
-    sql: ${TABLE}.OriginalTtitles ;;
   }
 
   dimension: title {
