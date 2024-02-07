@@ -11,6 +11,7 @@ view: standing_results {
   }
 
   dimension: season {
+
     type: number
     description: "The ID for a simulation."
     sql: ${TABLE}.season ;;
