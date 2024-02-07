@@ -11,7 +11,6 @@ view: standing_results {
   }
 
   dimension: season {
-
     type: number
     description: "The ID for a simulation."
     sql: ${TABLE}.season ;;
@@ -20,7 +19,7 @@ view: standing_results {
   dimension: team {
     type: string
     description: "The team name."
-    sql: ${TABLE}.season ;;
+    sql: ${TABLE}.teams ;;
   }
 
   dimension: wins {
