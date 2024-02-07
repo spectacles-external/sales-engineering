@@ -13,7 +13,7 @@ view: titles {
 
 #### Rename 'title_type' to 'title_category'.
 
-  dimension: title_type {
+  dimension: title_category {
     type: string
     description: "The type of title, i.e. movie or tv show."
     sql: ${TABLE}.titleType ;;
@@ -29,10 +29,10 @@ view: titles {
 
 #### Add this new field by uncommenting this code!
 
-  # dimension: original_title {
-  #   type: string
-  #   sql: ${TABLE}.original_title ;;
-  # }
+  dimension: original_title {
+     type: string
+     sql: ${TABLE}.original_title ;;
+  }
 
   dimension: is_adult {
     label: "Is Adult?"
