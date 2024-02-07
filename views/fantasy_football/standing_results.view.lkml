@@ -20,7 +20,7 @@ view: standing_results {
   dimension: team {
     type: string
     description: "The team name."
-    sql: ${TABLE}.team ;;
+    sql: ${TABLE}.season ;;
   }
 
   dimension: wins {
