@@ -22,7 +22,7 @@ view: titles {
   dimension: original_title {
     type: string
     description: "The type of title, i.e. movie or tv show."
-    sql: ${TABLE}.titleType ;;
+    sql: ${TABLE}.OriginalTtitles ;;
   }
 
   dimension: title {
