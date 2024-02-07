@@ -27,16 +27,12 @@ view: titles {
 
 #### ⚠️ STEP 2
 
-#### Update the 'sql' value with the 'new' column name
+#### Add this new field by uncommenting this code!
 
-  dimension: original_title {
-    type: string
-    # Comment this out
-    sql: ${TABLE}.originalTitle ;;
-
-    # Uncomment this out
-    # sql: ${TABLE}.original_title ;;
-  }
+  # dimension: original_title {
+  #   type: string
+  #   sql: ${TABLE}.original_title ;;
+  # }
 
   dimension: is_adult {
     label: "Is Adult?"
