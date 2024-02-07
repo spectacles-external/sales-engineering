@@ -13,7 +13,7 @@ view: titles {
 
 #### Rename 'title_type' to 'title_category'.
 
-  dimension: title_type {
+  dimension: title_types {
     type: string
     description: "The type of title, i.e. movie or tv show."
     sql: ${TABLE}.titleType ;;
@@ -22,7 +22,7 @@ view: titles {
   dimension: title {
     type: string
     description: "The name of the movie or tv show."
-    sql: ${TABLE}.primaryTitle ;;
+    sql: ${TABLE}.primaryTitles ;;
   }
 
 #### ⚠️ STEP 2
